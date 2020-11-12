@@ -21,7 +21,6 @@ Route::get('/blog', 'SiteController@blog')->name('blog');
 
 Route::get('/contact', 'SiteController@contact')->name('contact');
 
-
-Route::group(['prefix' => 'admin'], function () {
+	Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
