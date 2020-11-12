@@ -19,6 +19,7 @@ Route::get('/about', 'SiteController@about')->name('about');
 
 Route::get('/blog', 'SiteController@blog')->name('blog');
 
+
 Route::get('/contact', 'SiteController@contact')->name('contact');
 
 
