@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/bg.jpg)">
   <div class="container text-center">
     <h1 class="display-2 mb-4">Blog</h1>
@@ -18,114 +19,40 @@
                 <!-- Blog -->
                 <div class="col-md-12 blog-holder">
                     <div class="row">
+                
+                    @foreach($posts as $post)
                         <!-- Blog Item -->
                         <div class="col-md-4 blog-item-wrapper" data-aos="fade-up">
                             <div class="blog-item">
                                 <div class="blog-img">
-                                    <a href="single.html"><img src="img/blog-1.jpg" alt=""></a>
+                                    <a href="single.html"><img src="storage/{{ $post->image }}" alt=""></a>
                                 </div>
                                 <div class="blog-text">
                                     <div class="blog-tag">
-                                        <a href="#"><h6><small>KOD</small></h6></a>
+                                        <a href="#"><h6><small>{{ $post->getTranslatedAttribute('title', app()->getLocale(), 'fallbackLocale') }}</small></h6></a>
                                     </div>
                                     <div class="blog-title">
-                                        <a href="single.html"><h4>Ajoyib blog nomi</h4></a>
+                                        <a href="single.html"><h4>{{ $post->getTranslatedAttribute('title', app()->getLocale(), "fallbackLocale") }}</h4></a>
                                     </div>
                                     <div class="blog-meta">
-                                        <p class="blog-date">30 May 2016</p> /
+                                        <p class="blog-date">{{ $post->created_at }}</p> /
                                         <p class="blog-comment"><a href="">23 Comments</a></p>
                                     </div>
                                     <div class="blog-desc">
-                                        <p>Lorem ipsum dolor sit amet con sectetur adipiscing elit sed do eiu smod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                    <div class="blog-author">
-                                        <p>by John Doe</p>
-                                    </div>
-                                    <div class="blog-share-wrapper">
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-facebook-square"></i>
-                                        </a>
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-twitter-square"></i>
-                                        </a>
+                                        <p>{!! $post->getTranslatedAttribute('body', app()->getLocale(), 'fallbackLocale') !!}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- End of Blog Item -->
-                        <!-- Blog Item -->
-                        <div class="col-md-4 blog-item-wrapper" data-aos="fade-up" data-aos-delay="200">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="#"><img src="img/blog-2.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-text">
-                                    <div class="blog-tag">
-                                        <a href="#"><h6><small>SPORTS</small></h6></a>
-                                    </div>
-                                    <div class="blog-title">
-                                        <a href="#"><h4>Amazing Blog Title</h4></a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <p class="blog-date">30 May 2016</p> /
-                                        <p class="blog-comment"><a href="">23 Comments</a></p>
-                                    </div>
-                                    <div class="blog-desc">
-                                        <p>Lorem ipsum dolor sit amet con sectetur adipiscing elit sed do eiu smod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                    <div class="blog-author">
-                                        <p>by John Doe</p>
-                                    </div>
-                                    <div class="blog-share-wrapper">
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-facebook-square"></i>
-                                        </a>
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-twitter-square"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End of Blog Item -->
-                        <!-- Blog Item -->
-                        <div class="col-md-4 blog-item-wrapper" data-aos="fade-up" data-aos-delay="400">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="#"><img src="img/blog-3.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-text">
-                                    <div class="blog-tag">
-                                        <a href="#"><h6><small>ECONOMY</small></h6></a>
-                                    </div>
-                                    <div class="blog-title">
-                                        <a href="#"><h4>Amazing Blog Title</h4></a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <p class="blog-date">30 May 2016</p> /
-                                        <p class="blog-comment"><a href="">23 Comments</a></p>
-                                    </div>
-                                    <div class="blog-desc">
-                                        <p>Lorem ipsum dolor sit amet con sectetur adipiscing elit sed do eiu smod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                    <div class="blog-author">
-                                        <p>by John Doe</p>
-                                    </div>
-                                    <div class="blog-share-wrapper">
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-facebook-square"></i>
-                                        </a>
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-twitter-square"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End of Blog Item -->
+                    @endforeach
+              
                     </div>
                 </div>
                 <!-- End of Blog -->
+            </div>
+            <div style="margin-left: 1  00px">
+                {{ $link }}
             </div>
         </div>
     </div>

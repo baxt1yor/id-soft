@@ -1,25 +1,22 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
-    <!--
-     - Roxy: Bootstrap template by GettTemplates.com
-     - https://gettemplates.co/roxy
-    -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>soft-{{ $title }}</title>
-    <meta name="description" content="Roxy">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{ asset('./img/icons/icons1.png') }}" type="image/x-icon">
     <!-- External CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/select2/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/owlcarousel/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/lightcase/lightcase.css') }}">
      <link rel="stylesheet" href="{{ asset('https://unpkg.com/aos@next/dist/aos.css') }}" />
-
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
 
@@ -44,12 +41,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbar-nav-header">
                     <ul class="navbar-nav ml-auto">
-                        {{ menu('main', 'layouts.menus.navbar') }}
+                        {{  menu('main', 'layouts.menus.navbar') }}
+                        <li class="nav-item">
+                            @include('layouts.menus.parts_language')
+                        </li>
                         <li class="nav-item">
                             <a id="side-search-open" class="nav-link" href="#">
                                 <span class="lnr lnr-magnifier"></span>
                             </a>
-                        </li>
+                        </li> 
                          <li class="nav-item only-desktop">
                             <a class="nav-link" id="side-nav-open" href="#">
                                 <span class="lnr lnr-menu"></span>
@@ -135,6 +135,7 @@
 	<!-- Main JS -->
 	<script src="{{ asset('js/app.min.js') }}"></script>
 	<script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 	<script src="//localhost:35729/livereload.js"></script>
 </body>
 </html>

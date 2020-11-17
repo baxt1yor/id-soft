@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'SiteController@index')->name('home');
 
+Route::get('lang/{lang}', 'SiteController@switchLang')->name('switch.lang');
+
 Route::get('/about', 'SiteController@about')->name('about');
 
 Route::get('/blog', 'SiteController@blog')->name('blog');

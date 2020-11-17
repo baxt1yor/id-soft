@@ -152,6 +152,46 @@ section {
 .jumbotron-single h1 {
   font-size: 3rem !important; }
 
+.dropdown{
+  border-radius: 0;
+}
+
+.header__top__link--lang:focus{
+  border-color: #fff;
+}
+
+.header__top__link {
+  color: #fff;
+}
+
+.header__top__link:hover{
+  color:#fff;
+  border-color: #fff;
+}
+
+.header__top__link:focus{
+  color:#fff;
+  border-color: #fff;
+}
+
+.dropdown-menu{ 
+  background:none; 
+  border: none;
+}
+
+.dropdown-menu ul li{
+  list-style-type: none;
+}
+
+.dropdown-menu ul li a{
+  text-align: center; 
+  left: 60px;
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color:white;
+}
+
 .overlay {
   color: #fff; }
   .overlay:before {
@@ -807,3 +847,4 @@ section {
     font-size: 16px; } }
 
 /*=====  End of RESPONSIVE  ======*/
+

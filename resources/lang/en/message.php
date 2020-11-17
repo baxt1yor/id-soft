@@ -1,0 +1,3 @@
+<?php
+
+ $menu = menu('main');
