@@ -101,7 +101,7 @@
          		
          	</div>
          	<div class="col-lg-4 col-md-12 d-flex align-items-center">
-         		<p class="mx-auto text-center mb-0">&copy; 2020 ishlab chiqilgan by <a href="https://id-cam.uz" target="_blank">ID soft</a>.</p>
+         		<p class="mx-auto text-center mb-0">&copy; @lang('home.home23') <a href="https://id-cam.uz" target="_blank">ID soft</a>.</p>
          	</div>
            
             <div class="col-lg-4 col-md-12">

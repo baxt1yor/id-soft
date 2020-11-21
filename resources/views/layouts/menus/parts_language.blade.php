@@ -11,7 +11,7 @@
         @endif
 
         @if($lang == 'ru')
-        <span>Ру</span>
+        <span>Ru</span>
         @endif
     </button>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="main-language" style="">

@@ -18,7 +18,7 @@ class PortfolioAdd extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('picture');
-            $table->string('images');
+            $table->longText('images');
             $table->timestamps();
         });
     }

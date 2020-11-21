@@ -34,9 +34,9 @@
             <!-- Section Title -->
             <div class="title-wrap mb-5" data-aos="fade-up">
                 <h2 class="section-title">
-                 <a href="https://id-cam.uz" target="_blank">ID soft</a> tomonidan ishlab chiqarilgan
+                 @lang('home.home1')
                 </h2>
-                <p class="section-sub-title"><br> pharetra augue. Donec id elit non mi.</p>
+                <p class="section-sub-title"><br>@lang('home.home2')</p>
             </div>
             <!-- End of Section Title -->
             <div class="row">
@@ -49,14 +49,14 @@
                                 <div class="my-4">
                                     <i class="lnr lnr-cog fs-40"></i>
                                 </div>
-                                <h4>Moslashtrish oson </h4>
+                                <h4>@lang('home.home3') </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                             </div>
                             <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
                                 <div class="my-4">
                                     <i class="lnr lnr-frame-contract fs-40"></i>
                                 </div>
-                                <h4>Pixel Perfect</h4>
+                                <h4>@lang('home.home6')</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                             </div>
                         </div>
@@ -67,14 +67,14 @@
                                 <div class="my-4">
                                     <i class="lnr lnr-bubble fs-40"></i>
                                 </div>
-                                <h4>To'liq qo'llab-quvvatlash</h4>
+                                <h4>@lang('home.home4')</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                             </div>
                             <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
                                 <div class="my-4">
                                     <i class="lnr lnr-magic-wand fs-40"></i>
                                 </div>
-                                <h4>Toza dizayn</h4>
+                                <h4>@lang('home.home7')</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                             </div>
                         </div>
@@ -85,14 +85,14 @@
                                 <div class="my-4">
                                     <i class="lnr lnr-clock fs-40"></i>
                                 </div>
-                                <h4>O'z vaqtida amalga oshiriladigan loyiha</h4>
+                                <h4>@lang('home.home5')</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                             </div>
                             <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
                                 <div class="my-4">
                                     <i class="lnr lnr-thumbs-up fs-40"></i>
                                 </div>
-                                <h4>SASS bilan qurilgan</h4>
+                                <h4>@lang('home.home8')</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                     <div class="row align-items-center text-white">
 
                         <div class="col-md-4 offset-md-2 col-sm-6" data-aos="fade-right">
-                            <h4 class="mb-4">Har bir daqiqani suratga oling va uni barcha do'stlaringizga ulashing</h4>
+                            <h4 class="mb-4">@lang('home.home11')</h4>
                             <p>Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet.</p>
                             <button type="button" class="btn btn-outline-primary">FEATURES</button>
                         </div><!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
@@ -170,7 +170,7 @@
         <div class="section-content" data-aos="fade-up">
             <div class="heading-section text-center">
                 <h2>
-                    Hodimlar malumotlari
+                    @lang('home.home9')
                 </h2>
             </div>
             <div class="row">
@@ -222,13 +222,13 @@
         </div>
     </div>
 </section>
-<!-- End of Testimonial Section-->	<!-- Portfolio Section -->
+
 <section id="portfolio" class="bg-white">
     <div class="container">
         <div class="section-content">
             <!-- Section Title -->
             <div class="title-wrap">
-                <h2 class="section-title">Bizning <b>Ajoyib</b> Ishlarimiz</h2>
+                <h2 class="section-title"> @lang('home.home10') </h2>
                 <p class="section-sub-title">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. <br> pharetra augue. Donec id elit non mi.</p>
             </div>
             <!-- End of Section Title -->
@@ -237,9 +237,9 @@
                 <div class="col-md-12 portfolio-holder mt-3">
                     <!-- Btn Filter -->
                     <div class="filter-button-group btn-filter d-flex justify-content-center">
-                        <a tabindex="0" class="is-checked" data-filter="*">Hammasini korish</a>
-                        <a tabindex="0" data-filter=".minimalism">Minimalizm</a>
-                        <a tabindex="0" data-filter=".vintage">Amp</a>
+                        <a tabindex="0" class="is-checked" data-filter="*">@lang('home.home24')</a>
+                        <a tabindex="0" data-filter=".minimalism"> @lang('home.home25') </a>
+                        <a tabindex="0" data-filter=".vintage">@lang('home.home26')</a>
                         <a tabindex="0" data-filter=".creative">Ijodiy</a>
                     </div>
                     <!-- End of Btn Filter -->
@@ -249,9 +249,9 @@
                         <div class="gutter-sizer"></div>
                         <!-- Portfolio Item -->
                         <div class="grid-item creative" data-aos="fade-up">
-                        @foreach($portfolio as $portfol)
+                       
                             <div class="grid-item-wrapper" style="margin: 5px">
-                                <img src="storage/{{ $portfol->picture }}" alt="portfolio-img" class="portfolio-item">
+                                <img src="storage/{{ $portfolio[0]->picture }}" alt="portfolio-img" class="portfolio-item">
                                 <div class="grid-info">
                                     <div class="grid-link d-flex justify-content-center">
                                         <a class="img-pop" data-rel="lightcase" href="img/photo-6.jpg" title="Ship">
@@ -262,12 +262,11 @@
                                         </a>
                                     </div>
                                     <div class="grid-title">
-                                        <h4>{{ $portfol->name }}</h4>
+                                        <h4>{{ $portfolio[0]->name }}</h4>
                                     </div>
                                 </div>
 
                             </div>
-                        @endforeach
                         </div>
                         <!-- End of Portfolio Item -->
                     </div>
@@ -286,7 +285,7 @@
                 <div class="col-md-12">
                     <!-- Section Title -->
                     <div class="title-wrap mb-5">
-                        <h2>Kim biz bilan <span> ishlashni </span>yaxshi ko'radi</h2>
+                        <h2>@lang('home.home22')</h2>
                     </div>
                     <!-- End of Section Title -->
                 </div>
@@ -325,28 +324,25 @@
                 <div class="bg-white p-5 shadow">
                     <div class="heading-section text-center">
                         <h2 class="mb-4">
-                            Biz bilan bog'lanish
+                            @lang('home.home12')
                         </h2>
                     </div>
                     <form method="post" name="contact-us" action="">
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Ismi">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="@lang('home.home15')">
                             </div>
                             <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Telefon">
+                                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="@lang('home.home17')">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="websiteUrl" name="websiteUrl" placeholder="Veb sayt">
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Sizning xabaringiz..."></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="@lang('home.home18')"></textarea>
                             </div>
                             <div class="col-md-12 text-center">
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Xabar yuborish</button>
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">@lang('home.home14')</button>
                             </div>
                         </div>
                     </form>
@@ -354,29 +350,27 @@
             </div>
             <div class="col-lg-4 offset-lg-1" data-aos="fade-left">
                 <h2 class="mb-4">
-                    Har qanday veb-saytni yaratish uchun eng yaxshi echim. Bir marta to'lang.
+                    @lang('home.home13')
                 </h2>
-                <p class="mb-4">Men matn blokiman. Ushbu matnni o'zgartirish uchun tahrirlash tugmachasini bosing.</p>
-
                 <ul class="list-inline py-2">
                     <li class="list-inline-item text-center">
                         <span class="lnr fs-40 lnr-rocket"></span>
-                        <p>Tez etkazib berish</p>
+                        <p>@lang('home.home19')</p>
                     </li>
                     <li class="list-inline-item text-center">
                         <span class="lnr fs-40 lnr-magic-wand"></span>
-                        <p>Ajoyib dizayni</p>
+                        <p>@lang('home.home20')</p>
                     </li>
                     <li class="list-inline-item text-center">
                         <span class="lnr fs-40 lnr-cog"></span>
-                        <p>Moslashtirish</p>
+                        <p>@lang('home.home21')</p>
                     </li>
                 </ul>
 
-                <a href="#" class="btn btn-link p-0">
+               <!--  <a href="#" class="btn btn-link p-0">
                     <span>Hozir soting</span>
                     <span class="lnr lnr-arrow-right"></span>
-                </a>
+                </a> -->
             </div>
         </div>
         
@@ -387,10 +381,10 @@
     <div class="container">
         <div class="section-content" data-aos="fade-up">
             <div class="row">
-                <div class="col-md-12 text-center">
+               <!--  <div class="col-md-12 text-center">
                     <h2 class="mb-2"> Chiroyli veb-sayt yarating yoki ulardan milliontasi</h2>
                     <a class="btn btn-outline-primary btn-lg">XUSUSIYATLARI</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
